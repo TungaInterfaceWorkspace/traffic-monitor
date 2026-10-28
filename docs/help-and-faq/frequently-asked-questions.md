@@ -23,6 +23,15 @@ Privacy is implemented through a decentralized, local processing architecture:
 * **Open Source for Transparency**: The system's software is open source (OSS) for transparency and auditability.
 * **Privacy Regions**: The device may be configured with privacy regions to restrict what data is collected in certain areas, see [Defining Masks](../configuration/frigate-config.md#defining-masks).
 
+## The home page opens on a computer but not on an Android phone
+
+Android 17 requires apps that target it, including browsers, to ask for a new [local network permission](https://developer.android.com/about/versions/17/behavior-changes-17) before they can reach devices on the phone's own Wi-Fi network. If the device's page times out only on an Android 17 phone, allow that permission for the browser:
+
+* **Chrome**: tap **Allow** on the local network access prompt when it appears. If you already dismissed or blocked it, open the lock icon in the address bar, or go to **Settings > Site settings**, and set **Local network access** to **Allow** for the device's address.
+* **Firefox**: tap **Allow** on the prompt (optionally checking **Remember for this site**). If you already blocked it, go to **⋮ > Settings > Site settings > Local network devices** and allow the device's address there.
+
+If your browser is too old to show either prompt or setting, update it, or connect from a computer or a phone on an earlier Android version in the meantime.
+
 ## How many simultaneous object detections can the traffic monitor handle?
 
 > I am interested in using this in a location that is very congested. There could easily be 10 walkers and a few bikes in a single frame. Can it handle that many simultaneous detections? I am primarily looking for counts and direction of travel.
